@@ -476,12 +476,17 @@ button:hover {
         margin-bottom: 25px;
     }
 
+		h1 {
+			margin-left: 20px;
+		}
+
     background-color: var(--default-background);
+    padding-bottom: 15px;
     padding-top: 15px;
 
     img,
     video {
-        margin: 10px;
+        margin: 20px;
     }
 
     .description {
