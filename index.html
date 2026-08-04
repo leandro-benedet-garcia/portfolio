@@ -42,9 +42,10 @@ https://templatemo.com/tm-531-reflux
 					<nav class="main-nav" role="navigation">
 						<ul class="main-menu">
 							<li><a href="#section1">About Me</a></li>
-							<li><a href="#section2">What I’m good at</a></li>
-							<li><a href="#section3">My Work</a></li>
-							<li><a href="#section4">Contact Me</a></li>
+							<li><a href="#section2">What I'm good at</a></li>
+							<li><a href="#section3">Professional Work</a></li>
+							<li><a href="#section4">Personal Work</a></li>
+							<li><a href="#section5">Contact Me</a></li>
 						</ul>
 					</nav>
 					<div class="social-network">
@@ -126,7 +127,7 @@ https://templatemo.com/tm-531-reflux
 		<section class="section my-work" data-section="section3">
 			<div class="container">
 				<div class="section-heading">
-					<h2>My Work</h2>
+					<h2>Professional Projects</h2>
 					<div class="line-dec"></div>
 					<span>Projects that I worked on for clients as a contractor, and launched by them</span>
 				</div>
@@ -134,10 +135,10 @@ https://templatemo.com/tm-531-reflux
 				<div class="work row">
 					<div class="col-md-6">
 						<img src="/assets/images/games/exosky/cover.jpg" />
-						<video autoplay="" loop="" width="100%">
+						<video autoplay loop muted width="100%">
 							<source src="/assets/images/games/exosky/physics.webm" type="video/webm; codecs=vp9">
 						</video>
-						<video autoplay="" loop="" width="100%">
+						<video autoplay loop muted width="100%">
 							<source src="/assets/images/games/exosky/flight.webm" type="video/webm; codecs=vp9">
 						</video>
 					</div>
@@ -268,8 +269,8 @@ https://templatemo.com/tm-531-reflux
 
 			<div class="work row">
 				<h1>Multiplayer Building Game</h1>
-				<video controls loop width="100%">
-					<source src="/assets/images/games/multiplayer_builder/multiplayer.mp4" type="video/webm; codecs=vp9">
+				<video controls muted loop width="100%">
+					<source src="/assets/images/games/multiplayer_builder/multiplayer.mp4" type="video/mp4" />
 				</video>
 
 				<div class="col-md-6">
@@ -386,7 +387,104 @@ https://templatemo.com/tm-531-reflux
 			</div>
 		</section>
 
-		<section class="section contact-me" data-section="section4">
+		<section class="section my-work" data-section="section4">
+			<div class="container">
+				<div class="section-heading">
+					<h2>Personal Projects</h2>
+					<div class="line-dec"></div>
+					<span>Projects that I work on my free time and other general demos</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="work col-md-6 single-column">
+					<img src="/assets/images/games/personal/godot.svg" />
+					<div class="description">
+						<ul>
+							<li><b>Coding Language</b>: C++ and GDscript</li>
+						</ul>
+						<h2>General Information</h2>
+						<p>
+							I am a contributor with several pull requests, a list of merged pull requests can be seen <a
+								href="https://github.com/search?q=org%3Agodotengine%20author%3Aleandro-benedet-garcia%20is%3Apr%20is%3Amerged&type=pullrequests">clicking
+								here</a>.
+						</p>
+						<h2>What I did in the project</h2>
+						<ul>
+							<li>Worked in improving documentation in general in class references and documentation itself.</li>
+							<li>Fixed bugs.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="work col-md-6 single-column">
+					<img src="/assets/images/games/personal/panda3d.svg" />
+					<div class="description">
+						<ul>
+							<li><b>Coding Language</b>: C++ and Python</li>
+						</ul>
+						<h2>General Information</h2>
+						<p>
+							I contributed with a couple pull requests, a list of merged pull requests can be seen <a
+								href="https://github.com/search?q=org%3Apanda3d+author%3Aleandro-benedet-garcia+is%3Apr&type=pullrequests">clicking
+								here</a> (Some merged PRs are marked as closed, but they were merged).
+						</p>
+						<h2>What I did in the project</h2>
+						<ul>
+							<li>Made it possible the engine to be compiled in MingW</li>
+							<li>Made it possible the engine to be compiled in Clang with mingw64</li>
+							<li>Created UnitTests</li>
+							<li>Created additional functions </li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="work col-md-6 single-column">
+					<video width="100%" muted autoplay loop>
+						<source src="/assets/images/games/personal/turn_based.mp4" type="video/mp4" />
+					</video>
+					<div class="description">
+						<h1>Turn Based Game Template</h1>
+						<ul>
+							<li><b>Coding Language</b>: Gdscript</li>
+						</ul>
+						<h2>General Information</h2>
+						<p>
+							I made a very simple turn based game template that you can see the code by <a
+								href="https://codeberg.org/cerberus1746/turn-based-game-sample">clicking here</a>.
+							Sprites and general art made by Kenney.
+						</p>
+						<h2>What I did in the project</h2>
+						<ul>
+							<li>Health System</li>
+							<li>The entirety of the system is made entirely on events and reactive.</li>
+							<li>Simple animations made entirely inside Godot by hand.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="work col-md-6 single-column">
+					<img src="/assets/images/games/personal/code-snippet.png" />
+					<div class="description">
+						<h1>Code Snippets and Templates</h1>
+						<ul>
+							<li><b>Coding Language</b>: GDScript</li>
+						</ul>
+						<h2>General Information</h2>
+						<p>
+							Two different repositories, they are just common snippets and templates that I use myself all the time and
+							tend to send to people.
+						</p>
+						<ul>
+							<li><a href="https://codeberg.org/cerberus1746/godot-snippets">Snippets Repository</a></li>
+							<li><a href="https://codeberg.org/cerberus1746/godot-script-templates">Templates Repository</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+
+		<section class="section contact-me" data-section="section5">
 			<div class="container">
 				<div class="section-heading">
 					<h2>Contact Me</h2>
