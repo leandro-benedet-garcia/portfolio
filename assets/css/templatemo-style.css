@@ -125,7 +125,7 @@ html {
 
 /* Sidebar Menu */
 
-.menu{
+.menu {
 	left: 0px;
 }
 
@@ -397,6 +397,14 @@ button:hover {
 .my-services .col-md-6 {
 	padding-left: 5px;
 	padding-right: 5px;
+
+	.description {
+		img {
+			height: 100px;
+			width: auto;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .service-item {
@@ -523,13 +531,11 @@ button:hover {
 	max-width: 45%;
 	margin: 2.5%;
 
-	img, video {
+	img,
+	video {
 		margin: 0px;
 	}
 
-	&:has(+ .work) {
-		margin-bottom: 0px;
-	}
 }
 
 section.my-work .section-heading {
@@ -654,6 +660,7 @@ section.contact-me {
 }
 
 @media screen and (max-width: 1280px) {
+
 	.right-image-post h4,
 	.left-image-post h4 {
 		margin-top: 0px;

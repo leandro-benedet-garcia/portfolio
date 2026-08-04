@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="My personal gamedev portfolio" />
+	<meta name="author" content="Leandro Benedet Garcia" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
 	<title>Leandro Benedet Garcia - Portfolio</title>
@@ -85,11 +85,9 @@ https://templatemo.com/tm-531-reflux
 					<h2>General Skills</h2>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<div class="service-item">
-							<div class="service-icon">
-								<img src="assets/images/icons/godot.svg" />
-							</div>
+					<div class="col-md-6 work single-column">
+						<div class="description">
+							<img src="assets/images/icons/godot.svg" />
 							<h4>Godot Game Engine</h4>
 							<div>
 								General Experiences:
@@ -106,11 +104,9 @@ https://templatemo.com/tm-531-reflux
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="service-item">
-							<div class="service-icon">
-								<img src="assets/images/icons/unity.svg" />
-							</div>
+					<div class="col-md-6 work single-column">
+						<div class="description">
+							<img src="assets/images/icons/unity.svg" />
 							<h4>Unity Game Engine</h4>
 							<div>
 								General Experiences:
@@ -123,11 +119,9 @@ https://templatemo.com/tm-531-reflux
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="service-item">
-							<div class="service-icon">
-								<img src="assets/images/icons/docker.svg" />
-							</div>
+					<div class="col-md-6 work single-column">
+						<div class="description">
+							<img src="assets/images/icons/docker.svg" />
 							<h4>Docker</h4>
 							<div>
 								General Experiences:
@@ -142,8 +136,8 @@ https://templatemo.com/tm-531-reflux
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="service-item">
+					<div class="col-md-6 work single-column">
+						<div class="description">
 							<div class="service-icon">
 								<img src="assets/images/icons/github.svg" />
 							</div>
@@ -163,138 +157,136 @@ https://templatemo.com/tm-531-reflux
 		</section>
 
 		<section class="section my-work" data-section="section3">
-			<div class="container">
-				<div class="section-heading">
-					<h2>Professional Projects</h2>
-					<div class="line-dec"></div>
-					<span>Projects that I worked on for clients as a contractor, and launched by them</span>
+			<div class="section-heading">
+				<h2>Professional Projects</h2>
+				<div class="line-dec"></div>
+				<span>Projects that I worked on for clients as a contractor, and launched by them</span>
+			</div>
+
+			<div class="work row" data-section="exosky">
+				<div class="col-md-6">
+					<img src="assets/images/games/exosky/cover.jpg" />
+					<video autoplay loop muted width="100%">
+						<source src="assets/images/games/exosky/physics.webm" type="video/webm; codecs=vp9">
+					</video>
+					<video autoplay loop muted width="100%">
+						<source src="assets/images/games/exosky/flight.webm" type="video/webm; codecs=vp9">
+					</video>
 				</div>
+				<div class="description col-md-6">
+					<h1>Exosky</h1>
+					<ul>
+						<li><b>Client</b>: <a href="https://elevons.design/">Elevons, LLC</a></li>
+						<li><b>Role</b>: Lead Dev</li>
+						<li><b>Objective</b>: Create a realistic flight simulation that is performant and as close to real life as
+							possible</li>
+						<li><b>Delivered</b>: Created a flight simulation that is easy to extend by the client in Unity, it's also
+							easy to mod by players and worked with more than 16 planes at same time without the need for multi
+							threading at more than 60 FPS on a 4th generation core i5 CPU (a CPU from 2013).</li>
+						<li><b>Additional information</b>: Me and my team did not use AI. AI usage was used by the client himself
+							after we left the project.</li>
+					</ul>
 
-				<div class="work row" data-section="exosky">
-					<div class="col-md-6">
-						<img src="assets/images/games/exosky/cover.jpg" />
-						<video autoplay loop muted width="100%">
-							<source src="assets/images/games/exosky/physics.webm" type="video/webm; codecs=vp9">
-						</video>
-						<video autoplay loop muted width="100%">
-							<source src="assets/images/games/exosky/flight.webm" type="video/webm; codecs=vp9">
-						</video>
-					</div>
-					<div class="description col-md-6">
-						<h1>Exosky</h1>
-						<ul>
-							<li><b>Client</b>: <a href="https://elevons.design/">Elevons, LLC</a></li>
-							<li><b>Role</b>: Lead Dev</li>
-							<li><b>Objective</b>: Create a realistic flight simulation that is performant and as close to real life as
-								possible</li>
-							<li><b>Delivered</b>: Created a flight simulation that is easy to extend by the client in Unity, it's also
-								easy to mod by players and worked with more than 16 planes at same time without the need for multi
-								threading at more than 60 FPS on a 4th generation core i5 CPU (a CPU from 2013).</li>
-							<li><b>Additional information</b>: Me and my team did not use AI. AI usage was used by the client himself
-								after we left the project.</li>
-						</ul>
+					<h2>What I did in the project</h2>
+					<ul>
+						<li>Worked in the main equations of the simulation with a flight engineer</li>
+						<li>Managed the git repository and reviewed code from 3 other programmers to make sure of the code quality
+							maintained consistent and functional.</li>
+						<li>Integrated F-MOD into the game for better SFX in general</li>
+						<li>Created Modding system that allowed users to edit and add completely custom airplanes into the game,
+							without the need to even restart the game</li>
+					</ul>
 
-						<h2>What I did in the project</h2>
-						<ul>
-							<li>Worked in the main equations of the simulation with a flight engineer</li>
-							<li>Managed the git repository and reviewed code from 3 other programmers to make sure of the code quality
-								maintained consistent and functional.</li>
-							<li>Integrated F-MOD into the game for better SFX in general</li>
-							<li>Created Modding system that allowed users to edit and add completely custom airplanes into the game,
-								without the need to even restart the game</li>
-						</ul>
+					<h2>How long in the project</h2>
+					<ul>
+						<li>3 months, working half period</li>
+					</ul>
 
-						<h2>How long in the project</h2>
-						<ul>
-							<li>3 months, working half period</li>
-						</ul>
-
-						<h2>Where to Play</h2>
-						<div style="text-align: center;">
-							<a href="https://store.steampowered.com/app/2795160/Exosky/">
-								<img src="assets/images/icons/steam.svg" />
-							</a>
-						</div>
+					<h2>Where to Play</h2>
+					<div style="text-align: center;">
+						<a href="https://store.steampowered.com/app/2795160/Exosky/">
+							<img src="assets/images/icons/steam.svg" />
+						</a>
 					</div>
 				</div>
+			</div>
 
-				<div class="work row">
-					<div class="col-md-6">
-						<img src="assets/images/games/slutty_bass/cover.jpg" />
-						<img src="assets/images/games/slutty_bass/beach.png" />
-						<img src="assets/images/games/slutty_bass/crystal.png" />
+			<div class="work row">
+				<div class="col-md-6">
+					<img src="assets/images/games/slutty_bass/cover.jpg" />
+					<img src="assets/images/games/slutty_bass/beach.png" />
+					<img src="assets/images/games/slutty_bass/crystal.png" />
 
-					</div>
-					<div class="description col-md-6" data-section="sluttybass">
-						<h1>Slutty Bass</h1>
-						<ul>
-							<li><b>Client</b>: <a href="https://marrow-tap.com/">Marrow Tap</a></li>
-							<li><b>Role</b>: Lead Dev</li>
-							<li><b>Game Engine</b>: Unity</li>
-							<li><b>Coding Language</b>: C#</li>
-							<li><b>Objective</b>: Create a advergame for the album Slutty Bass by the rapper Tory Lanez</li>
-							<li><b>Additional information</b>: Previous developer vibe coded the game, so instead of having multiple
-								weeks to work in the game, we had only one to two weeks to finish it.</li>
-							<li><b>Delivered</b>: Created an action platformer using <a
-									href="https://corgi-engine.moremountains.com/">Corgi Engine</a>.</li>
-						</ul>
+				</div>
+				<div class="description col-md-6" data-section="sluttybass">
+					<h1>Slutty Bass</h1>
+					<ul>
+						<li><b>Client</b>: <a href="https://marrow-tap.com/">Marrow Tap</a></li>
+						<li><b>Role</b>: Lead Dev</li>
+						<li><b>Game Engine</b>: Unity</li>
+						<li><b>Coding Language</b>: C#</li>
+						<li><b>Objective</b>: Create a advergame for the album Slutty Bass by the rapper Tory Lanez</li>
+						<li><b>Additional information</b>: Previous developer vibe coded the game, so instead of having multiple
+							weeks to work in the game, we had only one to two weeks to finish it.</li>
+						<li><b>Delivered</b>: Created an action platformer using <a
+								href="https://corgi-engine.moremountains.com/">Corgi Engine</a>.</li>
+					</ul>
 
-						<h2>What I did in the project</h2>
-						<ul>
-							<li>Managed the git repository and reviewed code from 5 other programmers to make sure of the code quality
-								maintained consistent and functional.</li>
-							<li>Managed and reviewed tasks related to coding.</li>
-							<li>Created AI for bosses and enemies.</li>
-							<li>Imported and implemented animations made by artists.</li>
-						</ul>
+					<h2>What I did in the project</h2>
+					<ul>
+						<li>Managed the git repository and reviewed code from 5 other programmers to make sure of the code quality
+							maintained consistent and functional.</li>
+						<li>Managed and reviewed tasks related to coding.</li>
+						<li>Created AI for bosses and enemies.</li>
+						<li>Imported and implemented animations made by artists.</li>
+					</ul>
 
-						<h2>How long in the project</h2>
-						<ul>
-							<li>2 weeks, working full time</li>
-						</ul>
+					<h2>How long in the project</h2>
+					<ul>
+						<li>2 weeks, working full time</li>
+					</ul>
 
-						<h2>Where to Play</h2>
-						<div style="text-align: center;">
-							<a href="https://sluttybass.itch.io/slutty-bass">
-								<img src="assets/images/icons/itchio.svg" />
-							</a>
-						</div>
+					<h2>Where to Play</h2>
+					<div style="text-align: center;">
+						<a href="https://sluttybass.itch.io/slutty-bass">
+							<img src="assets/images/icons/itchio.svg" />
+						</a>
 					</div>
 				</div>
+			</div>
 
-				<div class="work row">
-					<div class="col-md-6">
-						<img src="assets/images/games/gamer_struggles/cover.png" />
-						<img src="assets/images/games/gamer_struggles/gameplay.gif" />
-						<img src="assets/images/games/gamer_struggles/combat.png" />
-						<img src="assets/images/games/gamer_struggles/novel.png" />
+			<div class="work row">
+				<div class="col-md-6">
+					<img src="assets/images/games/gamer_struggles/cover.png" />
+					<img src="assets/images/games/gamer_struggles/gameplay.gif" />
+					<img src="assets/images/games/gamer_struggles/combat.png" />
+					<img src="assets/images/games/gamer_struggles/novel.png" />
 
-					</div>
-					<div class="description col-md-6" data-section="gamerstruggles">
-						<h1>Gamer Struggles <b>(+18 NSFW)</b></h1>
-						<ul>
-							<li><b>Client</b>: <a href="https://cumbusters.itch.io/">CumBusters</a></li>
-							<li><b>Role</b>: Developer</li>
-							<li><b>Initial Objective</b>: Port the game to android and add controller support</li>
-							<li><b>Game Engine</b>: Unity</li>
-							<li><b>Coding Language</b>: C#</li>
-						</ul>
+				</div>
+				<div class="description col-md-6" data-section="gamerstruggles">
+					<h1>Gamer Struggles <b>(+18 NSFW)</b></h1>
+					<ul>
+						<li><b>Client</b>: <a href="https://cumbusters.itch.io/">CumBusters</a></li>
+						<li><b>Role</b>: Developer</li>
+						<li><b>Initial Objective</b>: Port the game to android and add controller support</li>
+						<li><b>Game Engine</b>: Unity</li>
+						<li><b>Coding Language</b>: C#</li>
+					</ul>
 
-						<h2>What I did in the project</h2>
-						<ul>
-							<li>Ported the game over to android.</li>
-							<li>Added gamepad support, functional in android and PC.</li>
-							<li>Created UnitTests for some enemies.</li>
-							<li>Refactored state machines to have more advanced character AI.</li>
-							<li>Created a system for costume changes.</li>
-						</ul>
+					<h2>What I did in the project</h2>
+					<ul>
+						<li>Ported the game over to android.</li>
+						<li>Added gamepad support, functional in android and PC.</li>
+						<li>Created UnitTests for some enemies.</li>
+						<li>Refactored state machines to have more advanced character AI.</li>
+						<li>Created a system for costume changes.</li>
+					</ul>
 
-						<h2>Where to Play (Android and PC)</h2>
-						<div style="text-align: center;">
-							<a href="https://cumbusters.itch.io/gamerstruggles">
-								<img src="assets/images/icons/itchio.svg" />
-							</a>
-						</div>
+					<h2>Where to Play (Android and PC)</h2>
+					<div style="text-align: center;">
+						<a href="https://cumbusters.itch.io/gamerstruggles">
+							<img src="assets/images/icons/itchio.svg" />
+						</a>
 					</div>
 				</div>
 		</section>
