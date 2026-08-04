@@ -8,6 +8,9 @@
 *.jpeg lfs
 *.gif lfs
 
+*.webm lfs
+*.mp4 lfs
+
 *.woff lfs
 *.woff2 lfs
 *.eot lfs
