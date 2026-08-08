@@ -60,7 +60,7 @@
 		checkSection();
 	});
 
-	$(".responsive-nav").load("../../main_menu.html", function () {
+	$(".responsive-nav").load("/portfolio/main_menu.html", function () {
 		$("#menu-toggle").on("click", function (e) {
 			let menu = $("#menu");
 
