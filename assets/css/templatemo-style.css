@@ -506,9 +506,13 @@ button:hover {
 			margin-left: 0px;
 		}
 
+		ul,
+		ol {
+			padding-left: 18px;
+		}
+
 		ul {
 			list-style-type: unset;
-			padding-left: 18px;
 		}
 
 		*:has(+ h1),
