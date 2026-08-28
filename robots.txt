@@ -1,0 +1,7 @@
+# https://leandro-benedet-garcia.github.io/portfolio/
+
+User-agent: *
+Allow: /
+
+# Direct crawlers to your sitemap to rapidly index your JSON-LD schema
+Sitemap: https://leandro-benedet-garcia.github.io/portfolio/sitemap.xml
