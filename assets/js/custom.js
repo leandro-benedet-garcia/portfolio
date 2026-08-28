@@ -76,10 +76,10 @@
 		});
 
 		$(".main-menu").on("click", "a", function (e) {
-			let currPage = window.location.pathname.replace("/", "");
+			let currPage = window.location.pathname;
 
-			if (currPage === "portfolio/")
-				currPage = "portfolio/index.html";
+			if (currPage === "/portfolio/")
+				currPage = "/portfolio/index.html";
 
 			let currHref = $(this).attr("href");
 
