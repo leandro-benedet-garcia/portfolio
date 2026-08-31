@@ -19,24 +19,82 @@ https://templatemo.com/tm-531-reflux
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
 	<!-- Additional CSS Files -->
-	<link rel="stylesheet" href="assets/css/fontawesome.css" />
-	<link rel="stylesheet" href="assets/css/templatemo-style.css" />
+	<link rel="stylesheet" href="/portfolio/assets/css/fontawesome.css" />
+	<link rel="stylesheet" href="/portfolio/assets/css/templatemo-style.css" />
 	<script type="application/ld+json">
-		{
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"email": "mailto:leandro.benedet.garcia@gmail.com",
-				"image": "https://leandro-benedet-garcia.github.io/portfolio/assets/images/author-image.jpg",
-				"jobTitle": "Game Developer",
-				"name": "Leandro Benedet Garcia",
-				"nationality": "Brazil",
-				"url": "https://leandro-benedet-garcia.github.io/portfolio/",
-				"description": "Game Developer - Backend Developer - Python, C/C++, JavaScript, C#, Gdscript"
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://leandro-benedet-garcia.github.io/portfolio/",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://leandro-benedet-garcia.github.io/portfolio/#person",
+    "name": "Leandro Benedet Garcia",
+    "jobTitle": "Senior Gameplay Engineer",
+    "description": "Senior Gameplay Engineer with 13+ years of experience. Specializing in multiplayer, physics, VR, and core game systems using Unity (C#), Godot (GDScript), and C++.",
+    "url": "https://leandro-benedet-garcia.github.io/portfolio/terms_of_service.html",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Freelance Gameplay Engineering Rates & Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Freelance Gameplay Engineering & Architecture Consulting",
+            "description": "Custom game mechanics implementation, physics optimization, server-authoritative multiplayer integration, and engine tool programming."
+          },
+          "priceCurrency": "USD",
+          "description": "Contract engineering and software architecture services available on an hourly, milestone or per-project scope basis."
+        }
+      ]
+    },
+    "knowsAbout": [
+      "Gameplay Engineering",
+      "Multiplayer Network Architecture",
+      "Dedicated Server Systems",
+      "Server-Authoritative Netcode",
+      "Aerodynamics & Physics Replication",
+      "State Machine Architecture",
+      "Modular AI Systems",
+      "Godot Engine Development",
+      "Unity Game Development",
+      "C# Scripting",
+      "C++ Core Engine Systems",
+      "GDScript Prototyping",
+      "Docker Containerization"
+    ],
+    "seeks": {
+      "@type": "Demand",
+      "description": "Available for contract, freelance, and full-time remote opportunities worldwide.",
+      "availabilityStarts": "2026-08-27",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "Remote / Global"
       }
-    }
+    },
+    "publishingPrinciples": [
+      {
+        "@type": "CreativeWork",
+        "name": "Exosky - 3D Flight Simulator",
+        "description": "Lead developer for a 3D flight simulator utilizing optimized, custom aerodynamics equations to run smoothly at over 60 FPS on 4th-gen i5 hardware.",
+        "keywords": "Unity, C#, Flight Simulation, Optimization"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Multiplayer Building Game",
+        "description": "Engineered a custom server-authoritative multiplayer sandbox structure using Godot dedicated server nodes and network replication.",
+        "keywords": "Godot, Dedicated Server, Netcode, Multiplayer"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Slutty Bass",
+        "description": "2D platformer using state machine mechanics, and modular AI architectures.",
+        "keywords": "Unity, C#, Platformer"
+      }
+    ]
+  }
+}
 </script>
 </head>
 
@@ -67,9 +125,8 @@ https://templatemo.com/tm-531-reflux
 							<li>Making a feature in a game is extremely easy. The hard part is making said feature work together with
 								other systems. If the game I will be working on already have content or code, it's required for me to
 								have access to the source code for a proper analysis of deadlines and pricing.</li>
-							<li>If it's the first time I am working with a client, I will require an advance payment of 100 USD after
-								the first five hours of work for single player games or, after the first two and half hours of work for
-								multiplayer games.</li>
+							<li>For first-time clients, a non-refundable upfront deposit of $100 USD is required before work begins.
+							</li>
 							<li>My minimum pay per project or service is 100 USD.</li>
 						</ol>
 						<h2>Usual Wages</h2>
@@ -81,14 +138,14 @@ https://templatemo.com/tm-531-reflux
 						<ol>
 							<li>Lead or Senior dev roles: +4 USD per hour for single player games, +8 USD per hour for multiplayer
 								games</li>
-							<ol>
-								<li>Additional of 1 USD per hour or 2 USD per hour for multiplayer games per people I manage or make
-									code reviews.
-								</li>
-								<li>Additional 0.5 USD per hour of additional members of the team for single and multiplayer games.
-								</li>
-								<li>Pricing changes in my rates caused by team changes only affects the next pay check.</li>
-							</ol>
+							<li>
+								<ol>
+									<li>Additional of 1 USD per hour or 2 USD per hour for multiplayer games per person I manage or make
+										code reviews.
+									</li>
+									<li>Pricing changes in my rates caused by team changes only affects the next pay check.</li>
+								</ol>
+							</li>
 						</ol>
 
 					</div>
@@ -102,13 +159,14 @@ https://templatemo.com/tm-531-reflux
 							about the use of generative AI, LLMs and other things of the sort to generate things like
 							code, art and other assets in this section.</p>
 						<p>
-							In my experience working in several projects, AI generated code is vastly inferior, and people does not
+							In my experience working in several projects, AI generated code is vastly inferior, and people do not
 							review said code at all so it's always a nightmare to work with.
 						</p>
 						<ol>
 							<li>Vibe coded projects will be entirely rewritten from scratch.</li>
-							<li>Images, Audio or 3D models generated by algorithms like stable diffusion or other generative
-								algorithms will not be tolerated and they will be immediately deleted on sight.
+							<li>I will not work on projects containing asset-generation AI (e.g., Stable Diffusion). If your project
+								contains them, work will be paused immediately until removed, or I may remove them myself upon
+								agreement.
 							</li>
 						</ol>
 					</div>
@@ -119,8 +177,8 @@ https://templatemo.com/tm-531-reflux
 
 	<!-- Scripts -->
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script async src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/portfolio/vendor/jquery/jquery.min.js"></script>
+	<script async src="/portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<script src="assets/js/custom.js"></script>
 </body>
