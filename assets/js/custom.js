@@ -40,11 +40,7 @@
 
 			if (topEdge < wScroll && bottomEdge > wScroll) {
 				let currentId = $this.data("section");
-				let reqLink;
-				if (currentId === "terms")
-					reqLink = $("a").filter('[href="terms_of_service.html"]');
-				else
-					reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+				let reqLink = $("a").filter("[href*=\\#" + currentId + "]");
 
 				reqLink
 					.closest("li")

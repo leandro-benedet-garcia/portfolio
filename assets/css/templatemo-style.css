@@ -106,10 +106,10 @@ html {
 }
 
 .main-nav li a {
-	height: 70px;
-	line-height: 70px;
+	height: 50px;
+	line-height: 50px;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	color: #fff;
 	width: 100%;
@@ -515,13 +515,14 @@ button:hover {
 			list-style-type: unset;
 		}
 
+		padding: 0px 20px;
+
 		*:has(+ h1),
 		*:has(+ h2),
 		*:has(+ h3) {
 			padding-bottom: 15px;
 		}
 
-		padding-left: 30px;
 
 		a img {
 			width: 100px;
