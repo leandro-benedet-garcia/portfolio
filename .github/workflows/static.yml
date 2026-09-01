@@ -35,6 +35,12 @@ jobs:
         with:
           lfs: true
 
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -43,11 +49,6 @@ jobs:
         with:
           path: '.'
 
-      - name: Generate the sitemap
-        id: sitemap
-        uses: cicirello/generate-sitemap@v1
-        with:
-          base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
 
       - name: Output stats
         run: |
