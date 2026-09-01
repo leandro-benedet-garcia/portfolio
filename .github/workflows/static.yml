@@ -40,6 +40,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
+          exclude-paths: /preview.html /main_menu.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
