@@ -38,8 +38,19 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
+			- name: Generate the sitemap
+				id: sitemap
+				uses: cicirello/generate-sitemap@v1
+				with:
+					base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
+
+			- name: Output stats
+				run: |
+					echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+					echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+					echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
