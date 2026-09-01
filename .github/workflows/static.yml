@@ -27,29 +27,33 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           lfs: true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-			- name: Generate the sitemap
-				id: sitemap
-				uses: cicirello/generate-sitemap@v1
-				with:
-					base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
 
-			- name: Output stats
-				run: |
-					echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
-					echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
-					echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://leandro-benedet-garcia.github.io/portfolio/
+
+      - name: Output stats
+        run: |
+          echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+          echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+          echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
 
       - name: Deploy to GitHub Pages
         id: deployment
