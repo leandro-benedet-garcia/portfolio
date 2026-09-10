@@ -1,0 +1,200 @@
+{
+  "content": [
+    {
+      "category": "professional-work",
+      "title": "Gameplay Engineering",
+      "description": "Projects that I worked on for clients as a contractor and launched by them",
+      "single_column": false,
+      "items": [
+        {
+          "id": "exosky",
+          "cover": "/portfolio/assets/images/games/exosky/cover.jpg",
+          "imagebar": {
+            "videos": [
+              {
+                "url": "/portfolio/assets/images/games/exosky/physics.webm",
+                "autoplay": true
+              },
+              {
+                "url": "/portfolio/assets/images/games/exosky/flight.webm",
+                "autoplay": true
+              }
+            ]
+          },
+          "title": "Exosky",
+          "client": {
+            "name": "Elevons, LLC",
+            "url": "https://elevons.design"
+          },
+          "role": "Lead Dev",
+          "objective": "Create a realistic flight simulation that is performant and as close to real life as possible",
+          "delivered": "Created a flight simulation in Unity that is easy for the client to extend. Easy to mod by players and worked with more than 16 planes at the same time at more than 60 FPS on a 4th generation core i5 CPU (a CPU from 2013).",
+          "subtitle": "Aerodynamics, Physics Programming & Engine Optimization",
+          "work_done": [
+            "Implemented and refined the core flight-simulation equations together with a flight engineer.",
+            "Managed the git repository and reviewed code from 3 other programmers to ensure code quality was maintained and functional.",
+            "Integrated F-MOD into the game for better SFX in general",
+            "Created a modding system that allowed users to edit and add completely custom airplanes into the game, without the need to even restart the game."
+          ],
+          "where_to_play": [
+            {
+              "url": "https://store.steampowered.com/app/2795160/Exosky/",
+              "icon": "/portfolio/assets/images/icons/steam.svg",
+              "name": "Steam"
+            }
+          ]
+        },
+        {
+          "id": "sluttybass",
+          "cover": "/portfolio/assets/images/games/slutty_bass/cover.jpg",
+          "imagebar": {
+            "images": [
+              "/portfolio/assets/images/games/slutty_bass/beach.png",
+              "/portfolio/assets/images/games/slutty_bass/crystal.png"
+            ]
+          },
+          "title": "SluttyBass",
+          "client": {
+            "name": "Marrow Tap",
+            "url": "https://marrow-tap.com"
+          },
+          "role": "Lead Dev",
+          "objective": "Create an advergame for a musician album under 3 weeks.",
+          "delivered": "Created an action platformer using Corgi Engine.",
+          "subtitle": "State Machine Architecture & Modular AI Systems",
+          "work_done": [
+            "Managed the git repository and reviewed code from 5 other programmers to ensure code quality was maintained and functional.",
+            "Managed and reviewed tasks related to coding.",
+            "Created AI for bosses and enemies.",
+            "Imported and implemented animations made by artists.",
+            "Created an iPhone build without a Mac device, created purely with GitHub Actions using Fastly (to handle code signage) and the MacOs hosted runner."
+          ],
+          "where_to_play": [
+            {
+              "url": "https://sluttybass.itch.io/slutty-bass",
+              "icon": "/portfolio/assets/images/icons/itchio.svg",
+              "name": "Itch.io"
+            },
+            {
+              "url": "https://apps.apple.com/br/app/slutty-bass/id6763365051",
+              "icon": "/portfolio/assets/images/icons/appstore.svg",
+              "name": "Apple APP Store"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "gameplay-prototypes",
+      "title": "Gameplay Prototypes",
+      "single_column": false,
+      "description": "Projects that I worked on very specific things but are not full games",
+      "items": [
+        {
+          "id": "multiplayerbuilding",
+          "highlight_video": "/portfolio/assets/images/games/multiplayer_builder/multiplayer.mp4",
+          "cover": "/portfolio/assets/images/games/multiplayer_builder/building.png",
+          "title": "Multiplayer Building Game",
+          "imagebar": {},
+          "client": {
+            "name": "Daek"
+          },
+          "role": "Developer",
+          "subtitle": "Server-Authoritative Netcode & NPC Decision Trees",
+          "work_done": [
+            "Created a multiplayer system where multiple people could build in the same town.",
+            "Made a voting system where players could vote on what the NPCs would prioritize in building and doing.",
+            "Created a building system where players could place buildings if the town had the available resources in storage buildings.",
+            "Created an AI system where NPCs could automatically pathfind where resources are stored and moved to where they could build.",
+            "Used LimboAI to make a decision tree where NPCs controlled themselves based on the priority system.",
+            "Created a full authoritative dedicated server made with C# and JavaScript with database access."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "nda-projects",
+      "single_column": true,
+      "title": "NDA projects",
+      "description": "Projects that I worked on, but are only used internally in corporations or aren't public and my contract only allows me to talk about some things, without showing details",
+      "items": [
+        {
+          "id": "digitaltwin",
+          "title": "Digital Twin",
+          "client": {
+            "name": "Ernst & Young (EY)",
+            "url": "https://ey.com"
+          },
+          "role": "Senior Developer",
+          "objective": "Create a clone of a real-life building and create a virtual copy where employees from a large energy company could log in and perform general tasks",
+          "subtitle": "What I did in the project",
+          "work_done": [
+            "Managed the git repository and reviewed code from 3 other programmers to make sure the code quality maintained consistent and functional.",
+            "Created VR system using VR Interaction Framework to be used with Oculus Quest 2",
+            "Made sure the project worked with and without VR with the same codebase, allowing it to be functional even on the web by simply exporting to different platforms."
+          ]
+        },
+        {
+          "id": "vrshowcase",
+          "title": "VR showcase",
+          "client": {
+            "name": "Ernst & Young (EY)",
+            "url": "https://ey.com"
+          },
+          "role": "Senior Developer",
+          "objective": "Update an older project to add further features to it, it was made using Meta XR SDK for Unity",
+          "subtitle": "What I did in the project",
+          "work_done": [
+            "Managed the git repository and reviewed code from 3 other programmers to make sure the code quality was maintained consistently and functionally.",
+            "Maintained existing codebase by fixing bugs.",
+            "Created an interactive tutorial on how the showcase worked, focused on people that never used VR before."
+          ]
+        },
+        {
+          "id": "physics-procedural",
+          "title": "Physics and Procedural Game",
+          "role": "Developer",
+          "objective": "Create a 2D game from scratch with procedural level generation and a physics-based character controller.",
+          "subtitle": "What I did in the project",
+          "work_done": [
+            "Worked on pathfinding of a flying enemy controlled by physics.",
+            "Created a physics-based flying character controller.",
+            "Created a procedural level generator utilizing TileMapLayers."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "opensource-contributions",
+      "title": "Open Source Contributions",
+      "single_column": true,
+      "description": "Open Source projects that I collaborated on",
+      "items": [
+        {
+          "id": "godot",
+          "cover": "/portfolio/assets/images/games/personal/godot.svg",
+          "title": "Godot Engine",
+          "description": "<p>I am a contributor with several pull requests; see a list of my <a target='_blank' rel='noopener' href='https://github.com/search?q=org%3Agodotengine%20author%3Aleandro-benedet-garcia%20is%3Apr%20is%3Amerged&amp;type=pullrequests'>merged pull requests on the official Godot GitHub Repository</a>.</p>",
+          "subtitle": "Contribution list",
+          "work_done": [
+            "Worked on improving documentation in general, in-class references and documentation itself.",
+            "Fixed bugs."
+          ]
+        },
+        {
+          "id": "panda3d",
+          "cover": "/portfolio/assets/images/games/personal/panda3d.svg",
+          "title": "Panda3D",
+          "description": "<p>I contributed with a couple of pull requests; a list of merged pull requests can be seen <a target='_blank' rel='noopener' href='https://github.com/search?q=org%3Apanda3d+author%3Aleandro-benedet-garcia+is%3Apr&amp;type=pullrequests'>clicking here</a> (Some merged PRs are marked as closed, but they were merged).</p>",
+          "subtitle": "Contribution list",
+          "work_done": [
+            "Made it possible for the engine to be compiled in MinGW",
+            "Made it possible for the engine to be compiled in Clang with MinGW64",
+            "Created unit tests",
+            "Created additional functions"
+          ]
+        }
+      ]
+    }
+  ]
+}

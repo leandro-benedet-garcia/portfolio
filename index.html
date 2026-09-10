@@ -19,242 +19,97 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
   </div>
 </section>
 
-<section class="section my-work" data-section="professional-work">
+{% for curr_category in site.data.works.content %}
+<section class="section my-work" data-section="{{ curr_category.category }}">
   <div class="section-heading">
-    <h2>Professional Gameplay Engineering Work</h2>
+    <h2>{{ curr_category.title}}</h2>
     <div class="line-dec"></div>
-    <span>Projects that I worked on for clients as a contractor and launched by them</span>
+    <span>{{ curr_category.description}}</span>
   </div>
 
-  <div class="work row" data-section="exosky">
-    <div class="col-md-6">
-      <img src="/portfolio/assets/images/games/exosky/cover.jpg" />
-      <video autoplay loop muted width="100%">
-        <source src="/portfolio/assets/images/games/exosky/physics.webm" type="video/webm; codecs=vp9">
-      </video>
-      <video autoplay loop muted width="100%">
-        <source src="/portfolio/assets/images/games/exosky/flight.webm" type="video/webm; codecs=vp9">
-      </video>
-    </div>
-    <div class="description col-md-6">
-      <h2>Exosky (Named YesPlane at the time)</h2>
-      <ul>
-        <li><b>Client</b>: <a href="https://elevons.design/" target="_blank" rel="noopener">Elevons, LLC</a></li>
-        <li><b>Role</b>: Lead Dev</li>
-        <li><b>Objective</b>: Create a realistic flight simulation that is performant and as close to real life as
-          possible</li>
-        <li><b>Delivered</b>: Created a flight simulation in Unity that is easy for the client to extend. Easy to mod by players and worked with more than 16 planes at the same time at more than 60 FPS on a 4th generation core i5 CPU (a CPU from 2013).</li>
-      </ul>
+  {% if curr_category.single_column %}
+    <div class="row">
+  {% endif %}
 
-      <h2>Aerodynamics, Physics Programming & Engine Optimization</h2>
-      <ul>
-        <li>Implemented and refined the core flight-simulation equations together with a flight engineer.</li>
-        <li>Managed the git repository and reviewed code from 3 other programmers to ensure code quality was maintained and functional.</li>
-        <li>Integrated F-MOD into the game for better SFX in general</li>
-        <li>Created a modding system that allowed users to edit and add completely custom airplanes into the game, without the need to even restart the game.</li>
-      </ul>
+  {% for curr_work in curr_category.items %}
+    {% if curr_work.imagebar %}
+    <div class="work row" data-section="{{ curr_work.id }}">
+      {% if curr_work.highlight_video %}
+        <video controls muted loop width="100%">
+          <source src="{{ curr_work.highlight_video }}" type="video/mp4" />
+          </video>
+        {% endif %}
+        <div class="col-md-6">
+          <img src="{{ curr_work.cover }}" />
+          {% for curr_video in curr_work.imagebar.videos %}
+            <video
+                {% if curr_video.autoplay %}
+                  autoplay
+                {%endif%}
+                loop muted width="100%">
+              <source src="{{ curr_video.url }}" type="video/webm; codecs=vp9">
+            </video>
+          {% endfor %}
+          {% for curr_image in curr_work.imagebar.images %}
+            <img src="{{ curr_image }}" />
+          {% endfor %}
+        </div>
+        <div class="description col-md-6">
+      {% else %}
+        <div class="work col-md-6 single-column" data-section="{{ curr_work.id }}">
+          <div class="description">
+            <img src="{{ curr_work.cover }}" />
 
-      <h2>Where to Play</h2>
-      <div style="text-align: center;">
-        <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/2795160/Exosky/" aria-label="Play Exosky on Steam">
-          <img alt="Steam Logo" src="/portfolio/assets/images/icons/steam.svg" />
-        </a>
+      {% endif %}
+        <h3>{{ curr_work.title }}</h3>
+        {{ curr_work.description }}
+        <ul>
+          {% if curr_work.client %}
+            <li><b>Client</b>:
+              {% if curr_work.client.url  %}
+                <a href="{{ curr_work.client.url }}" target="_blank" rel="noopener">{{ curr_work.client.name }}</a>
+              {% else  %}
+                {{ curr_work.client.name }}
+              {% endif %}
+            </li>
+          {% endif %}
+          {% if curr_work.role  %}
+            <li><b>Role</b>: {{ curr_work.role }}</li>
+          {% endif %}
+          {% if curr_work.objective  %}
+            <li><b>Objective</b>: {{ curr_work.objective }}</li>
+          {% endif %}
+          {% if curr_work.delivered  %}
+          <li><b>Delivered</b>: {{ curr_work.delivered }}</li>
+          {% endif %}
+        </ul>
+
+        <h4>{{ curr_work.subtitle }}</h4>
+        <ul>
+          {% for curr_work_done in curr_work.work_done %}
+            <li>{{ curr_work_done }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if curr_work.where_to_play %}
+          <h4>Where to Play</h4>
+          <div style="text-align: center;">
+            {% for curr_link in curr_work.where_to_play %}
+              <a target="_blank" rel="noopener" href="{{ curr_link.url }}" aria-label="Link to play {{ curr_work.title }} on {{ curr_link.name }}">
+                <img alt="Play {{ curr_work.title }} on {{ curr_link.name }}" src="{{ curr_link.icon }}" />
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
-  </div>
+  {% endfor %}
 
-  <div class="work row">
-    <div class="col-md-6">
-      <img src="/portfolio/assets/images/games/slutty_bass/cover.jpg" />
-      <img src="/portfolio/assets/images/games/slutty_bass/beach.png" />
-      <img src="/portfolio/assets/images/games/slutty_bass/crystal.png" />
+  {% if curr_category.single_column %}
     </div>
-    <div class="description col-md-6" data-section="sluttybass">
-      <h2>SlutttyBass</h2>
-      <ul>
-        <li><b>Client</b>: <a href="https://marrow-tap.com/" target="_blank" rel="noopener">Marrow Tap</a></li>
-        <li><b>Role</b>: Lead Dev</li>
-        <li><b>Game Engine</b>: Unity</li>
-        <li><b>Coding Language</b>: C#</li>
-        <li><b>Objective</b>: Create an advergame for a musician album under 3 weeks.</li>
-        <li><b>Delivered</b>: Created an action platformer using <a href="https://corgi-engine.moremountains.com/">Corgi Engine</a>.</li>
-      </ul>
-
-      <h2>State Machine Architecture & Modular AI Systems</h2>
-      <ul>
-        <li>Managed the git repository and reviewed code from 5 other programmers to ensure code quality was maintained and functional.</li>
-        <li>Managed and reviewed tasks related to coding.</li>
-        <li>Created AI for bosses and enemies.</li>
-        <li>Imported and implemented animations made by artists.</li>
-        <li>Created an iPhone build without a Mac device, created purely with GitHub Actions using Fastly (to handle code signage) and the MacOs hosted runner.</li>
-      </ul>
-
-      <h2>Where to Play</h2>
-      <div style="text-align: center;">
-        <a target="_blank" rel="noopener" href="https://sluttybass.itch.io/slutty-bass" aria-label="Play Slutty Bass on Itch.io">
-          <img alt="Itch.io logo" src="/portfolio/assets/images/icons/itchio.svg" />
-        </a>
-        <a target="_blank" rel="noopener" href="https://apps.apple.com/br/app/slutty-bass/id6763365051" aria-label="Download Slutty Bass from Apple App Store.">
-          <img alt="Itch.io logo" src="/portfolio/assets/images/icons/appstore.svg" />
-        </a>
-      </div>
-    </div>
-  </div>
-  <!--
-  <div class="work row">
-   <div class="col-md-6">
-    <img src="/portfolio/assets/images/games/gamer_struggles/cover.png" />
-    <img src="/portfolio/assets/images/games/gamer_struggles/gameplay.gif" />
-    <img src="/portfolio/assets/images/games/gamer_struggles/combat.png" />
-    <img src="/portfolio/assets/images/games/gamer_struggles/novel.png" />
-
-   </div>
-   <div class="description col-md-6" data-section="gamerstruggles">
-    <h1>Gamer Struggles <b>(+18 NSFW)</b></h1>
-    <ul>
-     <li><b>Client</b>: <a href="https://cumbusters.itch.io/">CumBusters</a></li>
-     <li><b>Role</b>: Developer</li>
-     <li><b>Initial Objective</b>: Port the game to android and add controller support</li>
-     <li><b>Game Engine</b>: Unity</li>
-     <li><b>Coding Language</b>: C#</li>
-    </ul>
-
-    <h2>What I did in the project</h2>
-    <ul>
-     <li>Ported the game over to Android.</li>
-     <li>Added gamepad support, functional on Android and PC.</li>
-     <li>Created unit tests for some enemies.</li>
-     <li>Refactored state machines to have more advanced character AI.</li>
-     <li>Created a system for costume changes.</li>
-    </ul>
-
-    <h2>Where to Play (Android and PC)</h2>
-    <div style="text-align: center;">
-     <a href="https://cumbusters.itch.io/gamerstruggles">
-      <img src="/portfolio/assets/images/icons/itchio.svg" />
-     </a>
-    </div>
-   </div>
- --->
+  {% endif %}
 </section>
-<section class="section my-work">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Gameplay Prototypes</h2>
-      <div class="line-dec"></div>
-      <span>Projects that I worked on very specific things but are not full games</span>
-    </div>
-  </div>
-
-  <div class="work row" data-section="multiplayerbuilding">
-    <video controls muted loop width="100%">
-      <source src="/portfolio/assets/images/games/multiplayer_builder/multiplayer.mp4" type="video/mp4" />
-    </video>
-
-    <div class="col-md-6">
-      <img src="/portfolio/assets/images/games/multiplayer_builder/building.png" />
-
-    </div>
-    <div class="description col-md-6">
-      <h2>Multiplayer Building Game</h2>
-      <ul>
-        <li><b>Client</b>: Daek</li>
-        <li><b>Role</b>: Developer</li>
-        <li><b>Game Engine</b>: Godot</li>
-        <li><b>Coding Language</b>: GDscript and C#</li>
-      </ul>
-
-      <h2>Server-Authoritative Netcode & NPC Decision Trees</h2>
-      <ul>
-        <li>Created a multiplayer system where multiple people could build in the same town.</li>
-        <li>Made a voting system where players could vote on what the NPCs would prioritize in building and doing.</li>
-        <li>Created a building system where players could place buildings if the town had the available resources in storage buildings.</li>
-        <li>Created an AI system where NPCs could automatically pathfind where resources are stored and moved to where they could build.</li>
-        <li>Used LimboAI to make a decision tree where NPCs controlled themselves based on the priority system.</li>
-        <li>Created a full authoritative dedicated server made with C# and JavaScript with database access.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section my-work">
-  <div class="container">
-    <div class="section-heading">
-      <h2>NDA projects</h2>
-      <div class="line-dec"></div>
-      <span>Projects that I worked on, but are only used internally in corporations or aren't public and my contract only allows me to talk about some things, without showing details</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="work col-md-6 single-column" data-section="digitaltwin">
-      <div class="description">
-        <h2>Digital Twin</h2>
-        <ul>
-          <li><b>Client</b>: <a target="_blank" rel="noopener" href="https://www.ey.com/">Ernst & Young (EY)</a>
-          </li>
-          <li><b>Role</b>: Senior Developer</li>
-          <li><b>Game Engine</b>: Unity</li>
-          <li><b>Coding Language</b>: C#</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          The objective of the project was to create a clone of a real-life building and create a virtual copy where employees from a large energy company could log in and perform general tasks
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Managed the git repository and reviewed code from 3 other programmers to make sure the code quality maintained consistent and functional.</li>
-          <li>Created VR system using <a href="https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066">VR Interaction Framework</a> to be used with Oculus Quest 2</li>
-          <li>Made sure the project worked with and without VR with the same codebase, allowing it to be functional even on the web by simply exporting to different platforms.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work col-md-6 single-column" data-section="vrshowcase">
-      <div class="description">
-        <h2>VR showcase</h2>
-        <ul>
-          <li><b>Client</b>: <a target="_blank" rel="noopener" href="https://www.ey.com/">Ernst & Young (EY)</a>
-          </li>
-          <li><b>Role</b>: Senior Developer</li>
-          <li><b>Game Engine</b>: Unity</li>
-          <li><b>Coding Language</b>: C#</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          Update an older project to add further features to it, it was made using <a href="https://assetstore.unity.com/packages/tools/integration/meta-xr-core-sdk-269169">Meta XR SDK for Unity</a>
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Managed the git repository and reviewed code from 3 other programmers to make sure the code quality was maintained consistently and functionally.</li>
-          <li>Maintained existing codebase by fixing bugs.</li>
-          <li>Created an interactive tutorial on how the showcase worked, focused on people that never used VR before.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work col-md-6 single-column" data-section="physicsprocedural">
-      <div class="description">
-        <h2>Physics and Procedural Game</h2>
-        <ul>
-          <li><b>Role</b>: Developer</li>
-          <li><b>Game Engine</b>: Godot</li>
-          <li><b>Coding Language</b>: C#</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          Create a 2D game from scratch with procedural level generation and a physics-based character controller.
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Worked on pathfinding of a flying enemy controlled by physics.</li>
-          <li>Created a physics-based flying character controller.</li>
-          <li>Created a procedural level generator utilizing TileMapLayers.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+{% endfor %}
 
 <section class="section my-services" data-section="general-skills">
   <div class="container">
@@ -267,7 +122,7 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
       <div class="col-sm-6 work single-column">
         <div class="description">
           <img src="/portfolio/assets/images/icons/godot.svg" />
-          <h4>Godot Game Engine</h4>
+          <h3>Godot Game Engine</h3>
           <div>
             Professional Experience:
             <ul>
@@ -286,7 +141,7 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
       <div class="col-sm-6 work single-column">
         <div class="description">
           <img src="/portfolio/assets/images/icons/unity.svg" />
-          <h4>Unity Game Engine</h4>
+          <h3>Unity Game Engine</h3>
           <div>
             Professional Experience:
             <ul>
@@ -303,7 +158,7 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
       <div class="col-sm-6 work single-column">
         <div class="description">
           <img src="/portfolio/assets/images/icons/docker.svg" />
-          <h4>Docker</h4>
+          <h3>Docker</h3>
           <div>
             Professional Experience:
             <ul>
@@ -325,7 +180,7 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
           <div class="service-icon">
             <img src="/portfolio/assets/images/icons/github.svg" />
           </div>
-          <h4>GitHub</h4>
+          <h3>GitHub</h3>
           <div>
             Professional Experience:
             <ul>
@@ -338,99 +193,6 @@ description: Senior Gameplay Engineer with 13+ years of coding experience. Speci
       </div>
     </div>
   </div>
-</section>
-
-<section class="section my-work" data-section="personal-projects">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Personal Projects</h2>
-      <div class="line-dec"></div>
-      <span>Projects that I work on in my free time, open-source projects that I collaborate on and other general demos</span>
-    </div>
-  </div>
-  <div class="row">
-    <div class="work col-md-6 single-column">
-      <img src="/portfolio/assets/images/games/personal/godot.svg" />
-      <div class="description">
-        <ul>
-          <li><b>Coding Language</b>: C++ and GDscript</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          I am a contributor with several pull requests; see a list of my <a target="_blank" rel="noopener" href="https://github.com/search?q=org%3Agodotengine%20author%3Aleandro-benedet-garcia%20is%3Apr%20is%3Amerged&type=pullrequests">merged
-            pull requests on the official Godot GitHub Repository</a>.
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Worked on improving documentation in general, in-class references and documentation itself.</li>
-          <li>Fixed bugs.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work col-md-6 single-column">
-      <img src="/portfolio/assets/images/games/personal/panda3d.svg" />
-      <div class="description">
-        <ul>
-          <li><b>Coding Language</b>: C++ and Python</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>I contributed with a couple of pull requests; a list of merged pull requests can be seen <a target="_blank" rel="noopener" href="https://github.com/search?q=org%3Apanda3d+author%3Aleandro-benedet-garcia+is%3Apr&type=pullrequests">clicking
-            here</a> (Some merged PRs are marked as closed, but they were merged).
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Made it possible for the engine to be compiled in MinGW</li>
-          <li>Made it possible for the engine to be compiled in Clang with MinGW64</li>
-          <li>Created unit tests</li>
-          <li>Created additional functions </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work col-md-6 single-column">
-      <video width="100%" muted autoplay loop>
-        <source src="/portfolio/assets/images/games/personal/turn_based.mp4" type="video/mp4" />
-      </video>
-      <div class="description">
-        <h2>Turn Based Game Template</h2>
-        <ul>
-          <li><b>Coding Language</b>: Gdscript</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          I made a very simple <a href="https://codeberg.org/cerberus1746/turn-based-game-sample">turn based game
-            template accessible here</a>.
-          Sprites and general art made by Kenney.
-        </p>
-        <h2>What I did in the project</h2>
-        <ul>
-          <li>Health System</li>
-          <li>The entirety of the system is made entirely on events and reactive.</li>
-          <li>Simple animations made entirely inside Godot by hand.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="work col-md-6 single-column">
-      <img src="/portfolio/assets/images/games/personal/code-snippet.png" />
-      <div class="description">
-        <h2>Code Snippets and Templates</h2>
-        <ul>
-          <li><b>Coding Language</b>: GDScript</li>
-        </ul>
-        <h2>General Information</h2>
-        <p>
-          Two different repositories; they are just common snippets and templates that I use myself all the time and tend to send to people.
-        </p>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://codeberg.org/cerberus1746/godot-snippets">Snippets
-              Repository</a></li>
-          <li><a target="_blank" rel="noopener" href="https://codeberg.org/cerberus1746/godot-script-templates">Templates Repository</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
 </section>
 
 <section class="section my-work" data-section="pricing">
